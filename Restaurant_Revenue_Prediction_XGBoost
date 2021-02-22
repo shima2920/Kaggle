@@ -7,7 +7,7 @@
       "provenance": [],
       "collapsed_sections": [],
       "toc_visible": true,
-      "authorship_tag": "ABX9TyO5RRFuxymYUNTzVSJYFifr",
+      "authorship_tag": "ABX9TyOpOP3Bm0wr8EGaRxfGzedJ",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -151,6 +151,21 @@
         "https://www.kaggle.com/c/restaurant-revenue-prediction/notebooks\r\n",
         "\r\n",
         "reference:https://www.kaggle.com/ayushikaushik/eda-regression-analysis"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "saJ65ht9JW-z"
+      },
+      "source": [
+        "# Summary\r\n",
+        "\r\n",
+        "**Tried XGBoost(02/22/2021)**\r\n",
+        "\r\n",
+        "The rmse of prediction is: 127148.77520922496\r\n",
+        "\r\n",
+        "Leader Board score: 1844254.84901\r\n"
       ]
     },
     {
@@ -3889,6 +3904,32 @@
       ],
       "execution_count": 273,
       "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eXANHY1SI5qW",
+        "outputId": "4860b570-07de-4c90-e2c2-4317ef112201"
+      },
+      "source": [
+        "y_pred_test = best_random.predict(X_test)\r\n",
+        "# eval rmse\r\n",
+        "print('\\nThe rmse of prediction is:', mean_squared_error(Y_test, y_pred_test) ** 0.5)"
+      ],
+      "execution_count": 277,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "\n",
+            "The rmse of prediction is: 127148.77520922496\n"
+          ],
+          "name": "stdout"
+        }
+      ]
     },
     {
       "cell_type": "code",
